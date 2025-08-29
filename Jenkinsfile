@@ -1,6 +1,6 @@
 pipeline {
-  options { ansiColor('xterm') }
   agent any
+  options { ansiColor('xterm') }
   stages {
     stage('Checkout') { steps { checkout scm } }
     stage('Moole Scan') {
