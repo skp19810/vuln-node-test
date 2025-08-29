@@ -6,11 +6,11 @@ pipeline {
     stage('Moole Scan') {
       steps {
         mooleScan(
-          credentialsId: 'abcd',
+          credentialsId: 'sehajk',
           environment: 'ENV_005',
           onIssuesFound: 'FAIL',
           severityThreshold: 'medium',
-          projectName: 'P_123'
+          projectId: 'P_123'
         )
       }
     }
