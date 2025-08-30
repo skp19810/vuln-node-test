@@ -15,7 +15,7 @@ jobs:
 
       - name: Moole Security Scan
         id: send
-        uses: Moole-PlatformX-Inc/Moole Security@v2
+        uses: Moole-PlatformX-Inc/moole-plugin-ghsa@v2
         with:
           api_token: ${{ secrets.MOOLE_API_TOKEN }}
           # pat: ${{ secrets.MOOLE_PAT }}
