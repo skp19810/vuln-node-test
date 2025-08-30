@@ -1,0 +1,24 @@
+name: Test Send Build File
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  ship:
+    # If your API is localhost, use self-hosted runners; GH-hosted can't hit your machine.
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Moole Security Scan
+        id: send
+        uses: Moole-PlatformX-Inc/Moole Security@v2
+        with:
+          api_token: ${{ secrets.MOOLE_API_TOKEN }}
+          # pat: ${{ secrets.MOOLE_PAT }}
+          project: P_123                        # sent as projectId
+          environment: ENV_005                            # sent as envId
+          debug_payload: true  
