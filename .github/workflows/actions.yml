@@ -15,10 +15,9 @@ jobs:
 
       - name: Moole Security Scan
         id: send
-        uses: Moole-PlatformX-Inc/moole-plugin-gha@v3
+        uses: Moole-PlatformX-Inc/moole-plugin-gha@v4
         with:
           api_token: ${{ secrets.MOOLE_API_TOKEN }}
           # pat: ${{ secrets.MOOLE_PAT }}
           project: P_123                        # sent as projectId
-          environment: ENV_005                            # sent as envId
-          debug_payload: true  
+          environment: ENV_005                            # sent as envID
